@@ -3,12 +3,12 @@ extends ../layout
 block content
   .page-header
     h3 Finance Bot
-  form.form-horizontal(method='POST')
+  form.form-horizontal(method='post')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
-      label.col-sm-3.control-label(for='id') ID
+      label.col-sm-3.control-label(for='id2') ID
       .col-sm-7
-        input.form-control(type='text', name='id', id='id', placeholder='ID', autofocus, required)
+        input.form-control(type='text', name='id2', id='id2', placeholder='ID', autofocus, required)
     .form-group
       label.col-sm-3.control-label(for='password') Password
       .col-sm-7
@@ -17,4 +17,7 @@ block content
       .col-sm-offset-3.col-sm-7
         button.col-sm-3.btn.btn-primary(type='submit')
           i.fa.fa-user
-          | Get Token        
+          | Get Token 
+      .col-sm-offset-3.col-sm-7 
+          if error != 'no'
+            label.error-msg-1 Invalid Client! Please recheck your credential!   
