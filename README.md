@@ -1,10 +1,14 @@
-Install guide
+Install guide:
 
 npm install
 
-Running
+--------
+
+Running:
 
 npm start
+
+--------
 
 Credential
 
